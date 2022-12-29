@@ -21,7 +21,7 @@ app.use(express.json())
 
 // Give command to share data via cors
 app.use(cors({
-    origin:'http://localhost:4200'
+    origin:['http://localhost:4200', 'http://192.168.0.147:8080']
 }))
 
 // 3. create a port number
@@ -134,3 +134,10 @@ app.post('/register',(req,res)=>{
      })
  })
 // delete request
+app.delete('/deleteAcc/:acno',(req,res)=>{
+    dataservices.deleteAcc(req.params.acno)  
+    .then(result=>{
+     res.status(result.statusCode).json(result);
+
+    })
+})

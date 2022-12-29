@@ -16,7 +16,7 @@ const User=mongoose.model('User',
     // schema creation
     acno:Number,
     username:String,
-    pssword:String,
+    password:String,
     balance:Number,
     transaction:[]
 });
