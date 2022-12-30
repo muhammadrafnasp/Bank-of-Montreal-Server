@@ -22,7 +22,7 @@ const db = require('./db')
 
     if(user){
      return {
-      status:'false',
+      status:false,
       statusCode:400,
       message:'user already registered'
      }
@@ -37,7 +37,7 @@ const db = require('./db')
      })
      newUser.save(); //data saved in mongodb
      return {
-      status:'true',
+      status:true,
       statusCode:200,
       message:'Register successful'
      };
@@ -47,8 +47,8 @@ const db = require('./db')
   }
 
 
-const login=(acno,pswd)=>{
-  return db.User.findOne({acno,pswd}) //data
+const login=(acno,password)=>{
+  return db.User.findOne({acno,password}) //data
   .then(user=>{
   
     if(user){
