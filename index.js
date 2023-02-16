@@ -33,7 +33,7 @@ app.listen(3000,() =>{
 // Applicatoin specific middleware
 const appMiddleware =(req,res,next)=>{
     console.log('Applicatoin specific middleware');
-    next();
+    next(); //if you miss to use the next() then it will affect entire application.And also causes to entire app goes to processing state.
 }
 app.use(appMiddleware)
 

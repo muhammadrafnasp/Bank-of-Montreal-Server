@@ -11,7 +11,7 @@ mongoose.connect('mongodb://localhost:27017/BankServer',
 )
 
 // 3.Define bank model
-const User=mongoose.model('User',
+const User=mongoose.model('User',  //model creation - User
 {
     // schema creation
     acno:Number,

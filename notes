@@ -27,18 +27,25 @@ Basic steps
   3xx - redirection
   4xx - client error
   5xx - server error
-  10)JWT token
+  10)JWT token - Authentication
+
+  To check login or not?
+  login---token generate--->client----req to deposit+token--->server token check?
+
   install JWT - npm i jsonwebtoken 
   To generate a token - sign()
 
-  11)Middleware
+  11)Middleware - to verify the token
   It comes in the middle of the request and response cycle of the nodejs execution process
+  It also provides access to many functions
     1)Application  specific middleware - for entire application
     req,res,next
     2)Router specific middleware -validate token - verify() - jwtwebtoken
 
   12) Database Intagration
-    1) Install mongoose - npm i mongoose
+    1)Install mongoose - npm i mongoose (for connecting nodejs and mongodb)
+    2)DB connect via mongoose
+    3)Create a model using mongoose
 
   13)Asynchronous function resolving - promise
         1)Resolve state - .then()
@@ -58,4 +65,9 @@ Basic steps
         1)Observable 
            a)resolved - Subscribe()
            b)reject - catch()
+
+
+
+   *note ---nammal install cheyyunna ella third party libraries um package.json il undakum 
+            eg:mongoose,cores etc,,-----        
     

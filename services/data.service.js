@@ -18,7 +18,8 @@ const db = require('./db')
 
   const register=(acno,username,password)=>{
    return db.User.findOne({acno}) //data
-    .then(user=>{
+    .then(   //asynchronous call
+     user=>{  
 
     if(user){
      return {
@@ -102,7 +103,7 @@ const deposit=(acno,pswd,amt)=>{
           Amount:amount
   
         })
-        user.save();
+        user.save(); //save to mongoDb
         return{
           status:'true',
           statusCode:'200',
